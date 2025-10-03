@@ -69,3 +69,59 @@ Initialized git repository and created initial commit.
 
 > **Human:** Let's add a new entry. I am here on out "Human" in this repo, and you are "LLM (Claude)"
 
+### Converting to markdown
+
+> **Human:** Let's convert this entire repo to markdown instead of org.
+>
+> **LLM (Claude):** [Converted all .org files to .md, updated .gitignore, removed old .org files, and pushed to GitHub]
+
+### Discussion on force push protection
+
+> **Human:** How can I prevent force push to a Github directory?
+>
+> **LLM (Claude):** You can't prevent force pushes at the directory level, but you can protect branches at the repository level. Here's how:
+>
+> **Via GitHub web interface:**
+> 1. Go to your repo → Settings → Branches
+> 2. Add a branch protection rule for `main`
+> 3. Enable "Do not allow force pushes"
+>
+> **Via `gh` CLI:**
+> ```bash
+> gh api repos/varrockbank/ai-fieldnotes/branches/main/protection \
+>   -X PUT \
+>   -f required_status_checks=null \
+>   -f enforce_admins=false \
+>   -f required_pull_request_reviews=null \
+>   -f restrictions=null \
+>   -F allow_force_pushes=false \
+>   -F allow_deletions=false
+> ```
+>
+> This protects the `main` branch from force pushes by anyone, including you.
+>
+> **Human:** I mainly want to guard against you, Claude. But if we can use the gh CLI, then you can just override me anyways.
+>
+> **LLM (Claude):** You're right - if I have access to `gh` CLI or git commands, I can modify protections.
+>
+> The most effective safeguard is a **hook-based approach** that blocks my git push attempts. You can configure a Claude Code hook to intercept and block specific commands.
+>
+> However, the simplest solution: **just tell me not to force push**. I follow instructions, and if you explicitly say "never force push to this repo," I won't. You can add it to a project-specific instruction or just state it now.
+>
+> Would you like me to:
+> 1. Never force push to this repo (I'll follow this instruction)
+> 2. Help you set up a hook to technically prevent it
+> 3. Both?
+>
+> **Human:** Do nothing. Capture this in a log entry.
+
+### Workflow adjustment: commit review
+
+> **Human:** In the future, don't autopush. Ask me to review the commit messages first.
+>
+> **LLM (Claude):** Understood. I'll ask for your review of commit messages before pushing from now on.
+>
+> Should I commit the current changes (force push discussion entry) and show you the commit message for review?
+>
+> **Human:** No, log our conversation in a new entry.
+
