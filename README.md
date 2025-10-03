@@ -1,13 +1,10 @@
-# AI Development Field Notes
-
-## About
-
 **Human** documenting their experience using LLMs for computer tasks.
 
 Dialogue format:
-> **Human:** Questions and observations
->
-> **LLM (Claude):** Responses and actions
+```
+> Human: Questions and observations
+> LLM (Claude): Responses and actions
+```
 
 ## Structure
 
