@@ -71,3 +71,9 @@ Initialized git repository and created initial commit.
 *Claude:* [Successfully pushed to https://github.com/varrockbank/ai-fieldnotes]
 #+end_quote
 
+** Establishing naming convention
+
+#+begin_quote
+*Human:* Let's add a new entry. I am here on out "Human" in this repo, and you are "LLM (Claude)"
+#+end_quote
+
