@@ -1,0 +1,12 @@
+#+TITLE: AI Development Field Notes
+
+* About
+
+Documenting my experience using LLMs for computer tasks.
+
+* Structure
+
+- =2025/= :: Monthly folders containing diary entries
+- =topics/= :: Cross-referenced notes organized by topic
+- =resources/= :: Reference materials and links
+- =index.org= :: Chronological index of all entries
