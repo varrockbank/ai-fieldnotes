@@ -7,6 +7,7 @@
 Dialogue format:
 #+begin_quote
 *Human:* Questions and observations
+
 *LLM (Claude):* Responses and actions
 #+end_quote
 
