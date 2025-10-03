@@ -9,7 +9,11 @@ Thumbs.db
 *.swp
 *.swo
 
-# Emacs
+# Emacs/Org-mode
 auto-save-list
 tramp
 .\#*
+
+# Markdown editors
+*.md~
+.vscode/
