@@ -2,7 +2,13 @@
 
 * About
 
-Documenting my experience using LLMs for computer tasks.
+*Human* documenting their experience using LLMs for computer tasks.
+
+Dialogue format:
+#+begin_quote
+*Human:* Questions and observations
+*LLM (Claude):* Responses and actions
+#+end_quote
 
 * Structure
 
